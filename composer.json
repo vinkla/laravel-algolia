@@ -1,0 +1,41 @@
+{
+    "name": "vinkla/algolia",
+    "description": "Laravel wrapper for the Algolia Search API.",
+    "homepage": "https://github.com/vinkla/algolia",
+    "license": "MIT",
+    "keywords": ["laravel", "algolia", "search", "api"],
+    "authors": [
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com",
+            "homepage": "https://vinkla.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.7",
+        "illuminate/contracts": "~5.0",
+        "illuminate/support": "~5.0",
+        "graham-campbell/manager": "~2.0",
+        "algolia/algoliasearch-client-php": "~1.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vinkla\\Algolia\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vinkla\\Tests\\Algolia\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
