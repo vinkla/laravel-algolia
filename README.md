@@ -71,7 +71,7 @@ use Vinkla\Algolia\Facades\Algolia;
 Algolia::initIndex('contacts');
 // We're done here - how easy was that, it just works!
 
-Algolia::getSettings();
+Algolia::getLogs();
 // This example is simple and there are far more methods available.
 ```
 
