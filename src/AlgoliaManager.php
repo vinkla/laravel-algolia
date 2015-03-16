@@ -52,6 +52,8 @@ class AlgoliaManager extends AbstractManager
 
     /**
      * Get the factory instance.
+     *
+     * @return \Vinkla\Algolia\Factories\AlgoliaFactory
      */
     public function getFactory()
     {
