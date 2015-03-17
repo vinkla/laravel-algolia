@@ -5,6 +5,17 @@ Laravel Algolia
 
 Laravel [Algolia](https://www.algolia.com/) is a [Algolia](https://www.algolia.com/) bridge for Laravel 5 using the [official Algolia Search API package](https://github.com/algolia/algoliasearch-client-php).
 
+```php
+// Search.
+$algolia->search('marty mcfly');
+
+// Create global API keys.
+$algolia->addUserKey(['search'], 300);
+
+// Want to use the facade?
+Algolia::getLogs();
+```
+
 [![Build Status](https://img.shields.io/travis/vinkla/algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/algolia)
 [![StyleCI](https://styleci.io/repos/32227759/shield?style=flat)](https://styleci.io/repos/32227759)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/algolia.svg?style=flat)](https://packagist.org/packages/vinkla/algolia)
