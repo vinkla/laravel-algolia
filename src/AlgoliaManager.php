@@ -1,11 +1,25 @@
 <?php
 
+/*
+ * This file is part of Laravel Algolia.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Algolia;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 use Vinkla\Algolia\Factories\AlgoliaFactory;
 
+/**
+ * This is the Algolia manager class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class AlgoliaManager extends AbstractManager
 {
     /**
