@@ -25,7 +25,7 @@ Algolia::getLogs();
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/algolia:~1.0
+composer require vinkla/algolia
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
