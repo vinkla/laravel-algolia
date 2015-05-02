@@ -31,7 +31,7 @@ class AlgoliaFactory
     {
         $config = $this->getConfig($config);
 
-        return new Client($config['id'], $config['key']);
+        return $this->getClient($config);
     }
 
     /**
@@ -56,5 +56,20 @@ class AlgoliaFactory
         }
 
         return array_only($config, $keys);
+    }
+
+    /**
+     * Get the Algolia client.
+     *
+     * @param array $auth
+     *
+     * @return \AlgoliaSearch\Client
+     */
+    protected function getClient(array $auth)
+    {
+        return new Client(
+            $auth['id'],
+            $auth['key']
+        );
     }
 }

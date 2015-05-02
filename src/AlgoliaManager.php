@@ -23,17 +23,19 @@ use Vinkla\Algolia\Factories\AlgoliaFactory;
 class AlgoliaManager extends AbstractManager
 {
     /**
-     * The Algolia factory.
+     * The factory instance.
      *
      * @var \Vinkla\Algolia\Factories\AlgoliaFactory
      */
     private $factory;
 
     /**
-     * Setup the Algolia factory.
+     * Create the Algolia manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
      * @param \Vinkla\Algolia\Factories\AlgoliaFactory $factory
+     *
+     * @return void
      */
     public function __construct(Repository $config, AlgoliaFactory $factory)
     {

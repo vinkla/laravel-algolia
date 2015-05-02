@@ -36,11 +36,25 @@ class AlgoliaFactoryTest extends AbstractTestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testMakeWithoutClientId()
+    public function testMakeWithoutId()
     {
         $factory = $this->getAlgoliaFactory();
 
-        $factory->make([]);
+        $factory->make([
+            'key' => 'your-api-key',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutKey()
+    {
+        $factory = $this->getAlgoliaFactory();
+
+        $factory->make([
+            'id' => 'your-application-id',
+        ]);
     }
 
     protected function getAlgoliaFactory()

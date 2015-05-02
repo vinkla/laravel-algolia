@@ -39,7 +39,9 @@ class AlgoliaServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/algolia.php');
+
         $this->publishes([$source => config_path('algolia.php')]);
+
         $this->mergeConfigFrom($source, 'algolia');
     }
 
