@@ -1,7 +1,7 @@
 Laravel Algolia
 ===============
 
-![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/laravel-algolia.png)
+![laravel-algolia](https://cloud.githubusercontent.com/assets/499192/7440612/f4c34b2e-f0bf-11e4-8cc1-b845256be3ff.png)
 
 Laravel [Algolia](https://www.algolia.com/) is a [Algolia](https://www.algolia.com/) bridge for Laravel 5 using the [official Algolia Search API package](https://github.com/algolia/algoliasearch-client-php).
 
