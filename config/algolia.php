@@ -47,6 +47,6 @@ return [
             'key' => 'your-api-key',
         ],
 
-    ]
+    ],
 
 ];

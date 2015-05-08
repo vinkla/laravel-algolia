@@ -100,7 +100,7 @@ class AlgoliaServiceProvider extends ServiceProvider
     {
         return [
             'algolia',
-            'algolia.factory'
+            'algolia.factory',
         ];
     }
 }
