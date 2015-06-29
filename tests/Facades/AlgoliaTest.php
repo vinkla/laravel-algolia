@@ -11,7 +11,9 @@
 
 namespace Vinkla\Tests\Algolia\Facades;
 
-use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
+use Vinkla\Algolia\AlgoliaManager;
+use Vinkla\Algolia\Facades\Algolia;
 use Vinkla\Tests\Algolia\AbstractTestCase;
 
 /**
@@ -21,7 +23,7 @@ use Vinkla\Tests\Algolia\AbstractTestCase;
  */
 class AlgoliaTest extends AbstractTestCase
 {
-    use FacadeTestCaseTrait;
+    use FacadeTrait;
 
     /**
      * Get the facade accessor.
@@ -40,7 +42,7 @@ class AlgoliaTest extends AbstractTestCase
      */
     protected function getFacadeClass()
     {
-        return 'Vinkla\Algolia\Facades\Algolia';
+        return Algolia::class;
     }
 
     /**
@@ -50,6 +52,6 @@ class AlgoliaTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return 'Vinkla\Algolia\AlgoliaManager';
+        return AlgoliaManager::class;
     }
 }

@@ -39,7 +39,7 @@ class AlgoliaServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/algolia.php');
-        
+
         if (class_exists('Illuminate\Foundation\Application', false)) {
             $this->publishes([$source => config_path('algolia.php')]);
         }
@@ -68,10 +68,10 @@ class AlgoliaServiceProvider extends ServiceProvider
     protected function registerFactory(Application $app)
     {
         $app->singleton('algolia.factory', function () {
-            return new Factories\AlgoliaFactory();
+            return new AlgoliaFactory();
         });
 
-        $app->alias('algolia.factory', 'Vinkla\Algolia\Factories\AlgoliaFactory');
+        $app->alias('algolia.factory', AlgoliaFactory::class);
     }
 
     /**
@@ -90,7 +90,7 @@ class AlgoliaServiceProvider extends ServiceProvider
             return new AlgoliaManager($config, $factory);
         });
 
-        $app->alias('algolia', 'Vinkla\Algolia\AlgoliaManager');
+        $app->alias('algolia', AlgoliaManager::class);
     }
 
     /**

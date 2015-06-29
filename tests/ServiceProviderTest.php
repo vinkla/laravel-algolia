@@ -11,7 +11,9 @@
 
 namespace Vinkla\Tests\Algolia;
 
-use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
+use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Vinkla\Algolia\AlgoliaManager;
+use Vinkla\Algolia\AlgoliaFactory;
 
 /**
  * This is the service provider test class.
@@ -20,15 +22,15 @@ use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
  */
 class ServiceProviderTest extends AbstractTestCase
 {
-    use ServiceProviderTestCaseTrait;
+    use ServiceProviderTrait;
 
     public function testAlgoliaFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Algolia\Factories\AlgoliaFactory');
+        $this->assertIsInjectable(AlgoliaFactory::class);
     }
 
     public function testAlgoliaManagerIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Algolia\AlgoliaManager');
+        $this->assertIsInjectable(AlgoliaManager::class);
     }
 }

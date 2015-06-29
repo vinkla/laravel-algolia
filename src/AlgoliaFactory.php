@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Algolia\Factories;
+namespace Vinkla\Algolia;
 
 use AlgoliaSearch\Client;
 

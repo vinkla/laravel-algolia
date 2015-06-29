@@ -13,7 +13,6 @@ namespace Vinkla\Algolia;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use Vinkla\Algolia\Factories\AlgoliaFactory;
 
 /**
  * This is the Algolia manager class.
@@ -25,7 +24,7 @@ class AlgoliaManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \Vinkla\Algolia\Factories\AlgoliaFactory
+     * @var \Vinkla\Algolia\AlgoliaFactory
      */
     private $factory;
 
@@ -33,7 +32,7 @@ class AlgoliaManager extends AbstractManager
      * Create the Algolia manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\Algolia\Factories\AlgoliaFactory $factory
+     * @param \Vinkla\Algolia\AlgoliaFactory $factory
      *
      * @return void
      */
@@ -69,7 +68,7 @@ class AlgoliaManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Vinkla\Algolia\Factories\AlgoliaFactory
+     * @return \Vinkla\Algolia\AlgoliaFactory
      */
     public function getFactory()
     {

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Tests\Algolia\Factories;
+namespace Vinkla\Tests\Algolia;
 
-use Vinkla\Algolia\Factories\AlgoliaFactory;
-use Vinkla\Tests\Algolia\AbstractTestCase;
+use AlgoliaSearch\Client;
+use Vinkla\Algolia\AlgoliaFactory;
 
 /**
  * This is the Algolia factory test class.
@@ -30,7 +30,7 @@ class AlgoliaFactoryTest extends AbstractTestCase
             'key' => 'your-api-key',
         ]);
 
-        $this->assertInstanceOf('AlgoliaSearch\Client', $return);
+        $this->assertInstanceOf(Client::class, $return);
     }
 
     /**
@@ -40,9 +40,7 @@ class AlgoliaFactoryTest extends AbstractTestCase
     {
         $factory = $this->getAlgoliaFactory();
 
-        $factory->make([
-            'key' => 'your-api-key',
-        ]);
+        $factory->make(['key' => 'your-api-key']);
     }
 
     /**
@@ -52,9 +50,7 @@ class AlgoliaFactoryTest extends AbstractTestCase
     {
         $factory = $this->getAlgoliaFactory();
 
-        $factory->make([
-            'id' => 'your-application-id',
-        ]);
+        $factory->make(['id' => 'your-application-id']);
     }
 
     protected function getAlgoliaFactory()

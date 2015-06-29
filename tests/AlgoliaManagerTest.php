@@ -11,9 +11,12 @@
 
 namespace Vinkla\Tests\Algolia;
 
+use AlgoliaSearch\Client;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
+use Illuminate\Contracts\Config\Repository;
 use Mockery;
 use Vinkla\Algolia\AlgoliaManager;
+use Vinkla\Algolia\AlgoliaFactory;
 
 /**
  * This is the Algolia manager test class.
@@ -35,15 +38,15 @@ class AlgoliaManagerTest extends AbstractTestBenchTestCase
 
         $return = $manager->connection();
 
-        $this->assertInstanceOf('AlgoliaSearch\Client', $return);
+        $this->assertInstanceOf(Client::class, $return);
 
         $this->assertArrayHasKey('algolia', $manager->getConnections());
     }
 
     protected function getManager(array $config)
     {
-        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\Algolia\Factories\AlgoliaFactory');
+        $repository = Mockery::mock(Repository::class);
+        $factory = Mockery::mock(AlgoliaFactory::class);
 
         $manager = new AlgoliaManager($repository, $factory);
 
@@ -53,7 +56,7 @@ class AlgoliaManagerTest extends AbstractTestBenchTestCase
         $config['name'] = 'algolia';
 
         $manager->getFactory()->shouldReceive('make')->once()
-            ->with($config)->andReturn(Mockery::mock('AlgoliaSearch\Client'));
+            ->with($config)->andReturn(Mockery::mock(Client::class));
 
         return $manager;
     }

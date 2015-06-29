@@ -12,6 +12,7 @@
 namespace Vinkla\Tests\Algolia;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Vinkla\Algolia\AlgoliaServiceProvider;
 
 /**
  * This is the abstract test case class.
@@ -29,6 +30,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return 'Vinkla\Algolia\AlgoliaServiceProvider';
+        return AlgoliaServiceProvider::class;
     }
 }
