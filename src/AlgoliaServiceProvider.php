@@ -11,6 +11,7 @@
 
 namespace Vinkla\Algolia;
 
+use AlgoliaSearch\Client;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -56,6 +57,7 @@ class AlgoliaServiceProvider extends ServiceProvider
     {
         $this->registerFactory($this->app);
         $this->registerManager($this->app);
+        $this->registerBindings($this->app);
     }
 
     /**
@@ -94,6 +96,24 @@ class AlgoliaServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register the bindings.
+     *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
+     * @return void
+     */
+    protected function registerBindings(Application $app)
+    {
+        $app->bind('algolia.connection', function ($app) {
+            $manager = $app['algolia'];
+
+            return $manager->connection();
+        });
+
+        $app->alias('algolia.connection', Client::class);
+    }
+
+    /**
      * Get the services provided by the provider.
      *
      * @return string[]
@@ -103,6 +123,7 @@ class AlgoliaServiceProvider extends ServiceProvider
         return [
             'algolia',
             'algolia.factory',
+            'algolia.connection',
         ];
     }
 }

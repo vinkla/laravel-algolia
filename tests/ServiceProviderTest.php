@@ -11,9 +11,10 @@
 
 namespace Vinkla\Tests\Algolia;
 
+use AlgoliaSearch\Client;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use Vinkla\Algolia\AlgoliaManager;
 use Vinkla\Algolia\AlgoliaFactory;
+use Vinkla\Algolia\AlgoliaManager;
 
 /**
  * This is the service provider test class.
@@ -32,5 +33,17 @@ class ServiceProviderTest extends AbstractTestCase
     public function testAlgoliaManagerIsInjectable()
     {
         $this->assertIsInjectable(AlgoliaManager::class);
+    }
+
+    public function testBindings()
+    {
+        $this->assertIsInjectable(Client::class);
+
+        $original = $this->app['algolia.connection'];
+        $this->app['algolia']->reconnect();
+        $new = $this->app['algolia.connection'];
+
+        $this->assertNotSame($original, $new);
+        $this->assertEquals($original, $new);
     }
 }

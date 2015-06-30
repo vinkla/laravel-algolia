@@ -15,8 +15,8 @@ use AlgoliaSearch\Client;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Illuminate\Contracts\Config\Repository;
 use Mockery;
-use Vinkla\Algolia\AlgoliaManager;
 use Vinkla\Algolia\AlgoliaFactory;
+use Vinkla\Algolia\AlgoliaManager;
 
 /**
  * This is the Algolia manager test class.
