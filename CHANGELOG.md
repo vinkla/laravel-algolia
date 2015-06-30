@@ -2,7 +2,7 @@
 
 ## 2.0.0 (released 2015-06-30)
 
-- Official lumen support
+- Official Lumen support
 - Code cleanup
 - Moved the factory
 - Container binding improvements
