@@ -1,6 +1,6 @@
 {
     "name": "vinkla/algolia",
-    "description": "A Algolia bridge for Laravel",
+    "description": "An Algolia bridge for Laravel",
     "license": "MIT",
     "keywords": ["laravel", "algolia", "search", "api"],
     "authors": [
