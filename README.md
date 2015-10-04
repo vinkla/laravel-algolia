@@ -32,13 +32,13 @@ composer require vinkla/algolia
 Add the service provider to ```config/app.php``` in the `providers` array.
 
 ```php
-'Vinkla\Algolia\AlgoliaServiceProvider'
+Vinkla\Algolia\AlgoliaServiceProvider::class
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
 
 ```php
-'Algolia' => 'Vinkla\Algolia\Facades\Algolia'
+'Algolia' => Vinkla\Algolia\Facades\Algolia::class
 ```
 
 ## Configuration
