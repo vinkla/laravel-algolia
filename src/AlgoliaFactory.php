@@ -12,6 +12,7 @@
 namespace Vinkla\Algolia;
 
 use AlgoliaSearch\Client;
+use InvalidArgumentException;
 
 /**
  * This is the Algolia factory class.
@@ -49,9 +50,7 @@ class AlgoliaFactory
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException(
-                    'The Algolia client requires authentication.'
-                );
+                throw new InvalidArgumentException("Missing configuration key [$key].");
             }
         }
 
