@@ -26,13 +26,13 @@
             "Vinkla\\Algolia\\": "src/"
         }
     },
-    "config": {
-        "preferred-install": "dist"
-    },
     "autoload-dev": {
         "psr-4": {
             "Vinkla\\Tests\\Algolia\\": "tests/"
         }
+    },
+    "config": {
+        "preferred-install": "dist"
     },
     "extra": {
         "branch-alias": {
