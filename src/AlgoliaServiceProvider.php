@@ -12,7 +12,7 @@
 namespace Vinkla\Algolia;
 
 use AlgoliaSearch\Client;
-use Illuminate\Contracts\Container\Container as Application;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -59,62 +59,56 @@ class AlgoliaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerFactory($this->app);
-        $this->registerManager($this->app);
-        $this->registerBindings($this->app);
+        $this->registerFactory();
+        $this->registerManager();
+        $this->registerBindings();
     }
 
     /**
      * Register the factory class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerFactory(Application $app)
+    protected function registerFactory()
     {
-        $app->singleton('algolia.factory', function () {
+        $this->app->singleton('algolia.factory', function () {
             return new AlgoliaFactory();
         });
 
-        $app->alias('algolia.factory', AlgoliaFactory::class);
+        $this->app->alias('algolia.factory', AlgoliaFactory::class);
     }
 
     /**
      * Register the manager class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerManager(Application $app)
+    protected function registerManager()
     {
-        $app->singleton('algolia', function ($app) {
+        $this->app->singleton('algolia', function (Container $app) {
             $config = $app['config'];
             $factory = $app['algolia.factory'];
 
             return new AlgoliaManager($config, $factory);
         });
 
-        $app->alias('algolia', AlgoliaManager::class);
+        $this->app->alias('algolia', AlgoliaManager::class);
     }
 
     /**
      * Register the bindings.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerBindings(Application $app)
+    protected function registerBindings()
     {
-        $app->bind('algolia.connection', function ($app) {
+        $this->app->bind('algolia.connection', function (Container $app) {
             $manager = $app['algolia'];
 
             return $manager->connection();
         });
 
-        $app->alias('algolia.connection', Client::class);
+        $this->app->alias('algolia.connection', Client::class);
     }
 
     /**
