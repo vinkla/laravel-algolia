@@ -44,6 +44,6 @@ class ServiceProviderTest extends AbstractTestCase
         $new = $this->app['algolia.connection'];
 
         $this->assertNotSame($original, $new);
-        $this->assertEquals($original, $new);
+        $this->assertSame(get_class($original), get_class($new));
     }
 }
