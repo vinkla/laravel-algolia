@@ -16,7 +16,7 @@ $algolia->addUserKey(['search'], 300);
 Algolia::getLogs();
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/algolia)
+[![Build Status](https://img.shields.io/travis/vinkla/laravel-algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-algolia)
 [![StyleCI](https://styleci.io/repos/32227759/shield?style=flat)](https://styleci.io/repos/32227759)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/algolia.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/algolia/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/algolia.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/algolia)
