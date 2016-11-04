@@ -1,9 +1,8 @@
-Laravel Algolia
-===============
+# Laravel Algolia
 
 ![laravel-algolia](https://cloud.githubusercontent.com/assets/499192/7440612/f4c34b2e-f0bf-11e4-8cc1-b845256be3ff.png)
 
-Laravel [Algolia](https://www.algolia.com/) is a [Algolia](https://www.algolia.com/) bridge for Laravel 5 using the [official Algolia Search API package](https://github.com/algolia/algoliasearch-client-php).
+> An [Algolia](https://www.algolia.com/) bridge for Laravel.
 
 ```php
 // Search.
@@ -18,8 +17,7 @@ Algolia::getLogs();
 
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-algolia)
 [![StyleCI](https://styleci.io/repos/32227759/shield?style=flat)](https://styleci.io/repos/32227759)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/algolia.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/algolia/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/algolia.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/algolia)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-hashids.svg?style=flat)](https://codecov.io/github/vinkla/laravel-hashids)
 [![Latest Version](https://img.shields.io/github/release/vinkla/algolia.svg?style=flat)](https://github.com/vinkla/algolia/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/algolia.svg?style=flat)](https://packagist.org/packages/vinkla/algolia)
 
@@ -133,8 +131,9 @@ App::make('Foo')->bar();
 ```
 
 ## Documentation
+
 There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the official Algolia Search API package](https://github.com/algolia/algoliasearch-client-php).
 
 ## License
 
-Laravel Algolia is licensed under [The MIT License (MIT)](LICENSE).
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
