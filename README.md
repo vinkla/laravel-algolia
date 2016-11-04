@@ -17,7 +17,7 @@ Algolia::getLogs();
 
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-algolia)
 [![StyleCI](https://styleci.io/repos/32227759/shield?style=flat)](https://styleci.io/repos/32227759)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-hashids.svg?style=flat)](https://codecov.io/github/vinkla/laravel-hashids)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-algolia.svg?style=flat)](https://codecov.io/github/vinkla/laravel-algolia)
 [![Latest Version](https://img.shields.io/github/release/vinkla/algolia.svg?style=flat)](https://github.com/vinkla/algolia/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/algolia.svg?style=flat)](https://packagist.org/packages/vinkla/algolia)
 
