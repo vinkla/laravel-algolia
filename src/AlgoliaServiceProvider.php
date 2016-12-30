@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Vinkla\Algolia;
 
 use AlgoliaSearch\Client;
@@ -116,7 +118,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return string[]
      */
-    public function provides()
+    public function provides(): array
     {
         return [
             'algolia',

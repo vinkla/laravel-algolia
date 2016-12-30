@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Vinkla\Algolia;
 
 use AlgoliaSearch\Client;
@@ -28,7 +30,7 @@ class AlgoliaFactory
      *
      * @return \AlgoliaSearch\Client
      */
-    public function make(array $config)
+    public function make(array $config): Client
     {
         $config = $this->getConfig($config);
 
@@ -44,7 +46,7 @@ class AlgoliaFactory
      *
      * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         $keys = ['id', 'key'];
 
@@ -64,7 +66,7 @@ class AlgoliaFactory
      *
      * @return \AlgoliaSearch\Client
      */
-    protected function getClient(array $auth)
+    protected function getClient(array $auth): Client
     {
         return new Client(
             $auth['id'],

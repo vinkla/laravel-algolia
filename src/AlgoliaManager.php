@@ -9,8 +9,11 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Vinkla\Algolia;
 
+use AlgoliaSearch\Client;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
@@ -48,9 +51,9 @@ class AlgoliaManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return mixed
+     * @return \AlgoliaSearch\Client
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): Client
     {
         return $this->factory->make($config);
     }
@@ -60,7 +63,7 @@ class AlgoliaManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'algolia';
     }
@@ -70,7 +73,7 @@ class AlgoliaManager extends AbstractManager
      *
      * @return \Vinkla\Algolia\AlgoliaFactory
      */
-    public function getFactory()
+    public function getFactory(): AlgoliaFactory
     {
         return $this->factory;
     }
