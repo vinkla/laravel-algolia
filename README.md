@@ -1,6 +1,6 @@
 # Laravel Algolia
 
-![laravel-algolia](https://cloud.githubusercontent.com/assets/499192/7440612/f4c34b2e-f0bf-11e4-8cc1-b845256be3ff.png)
+![laravel-algolia](https://user-images.githubusercontent.com/499192/27283300-e580180a-54f3-11e7-94bb-288c6df2834a.png)
 
 > An [Algolia](https://www.algolia.com/) bridge for Laravel.
 
