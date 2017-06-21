@@ -38,6 +38,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "2.5-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Vinkla\\Algolia\\AlgoliaServiceProvider"
+            ],
+            "aliases": {
+                "Algolia": "Vinkla\\Algolia\\Facades\\Algolia"
+            }
         }
     },
     "minimum-stability": "dev",
