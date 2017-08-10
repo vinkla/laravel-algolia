@@ -114,17 +114,17 @@ use Vinkla\Algolia\AlgoliaManager;
 
 class Foo
 {
-	protected $algolia;
+    protected $algolia;
 
-	public function __construct(AlgoliaManager $algolia)
-	{
-		$this->algolia = $algolia;
-	}
+    public function __construct(AlgoliaManager $algolia)
+    {
+        $this->algolia = $algolia;
+    }
 
-	public function bar()
+    public function bar()
 	{
-		$this->algolia->initIndex('friends');
-	}
+        $this->algolia->initIndex('friends');
+    }
 }
 
 App::make('Foo')->bar();
