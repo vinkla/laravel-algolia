@@ -29,7 +29,7 @@ class AlgoliaManager extends AbstractManager
      *
      * @var \Vinkla\Algolia\AlgoliaFactory
      */
-    private $factory;
+    protected $factory;
 
     /**
      * Create the Algolia manager instance.

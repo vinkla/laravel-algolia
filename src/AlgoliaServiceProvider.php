@@ -31,7 +31,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->setupConfig();
     }
@@ -41,7 +41,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function setupConfig()
+    protected function setupConfig(): void
     {
         $source = realpath($raw = __DIR__.'/../config/algolia.php') ?: $raw;
 
@@ -59,7 +59,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->registerFactory();
         $this->registerManager();
@@ -71,7 +71,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerFactory()
+    protected function registerFactory(): void
     {
         $this->app->singleton('algolia.factory', function () {
             return new AlgoliaFactory();
@@ -85,7 +85,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerManager()
+    protected function registerManager(): void
     {
         $this->app->singleton('algolia', function (Container $app) {
             $config = $app['config'];
@@ -102,7 +102,7 @@ class AlgoliaServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerBindings()
+    protected function registerBindings(): void
     {
         $this->app->bind('algolia.connection', function (Container $app) {
             $manager = $app['algolia'];
