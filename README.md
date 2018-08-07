@@ -15,12 +15,11 @@ $algolia->addUserKey(['search'], 300);
 Algolia::getLogs();
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/laravel-algolia/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-algolia)
-[![StyleCI](https://styleci.io/repos/32227759/shield?style=flat)](https://styleci.io/repos/32227759)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-algolia.svg?style=flat)](https://codecov.io/github/vinkla/laravel-algolia)
-[![Total Downloads](https://img.shields.io/packagist/dt/vinkla/algolia.svg?style=flat)](https://packagist.org/packages/vinkla/algolia)
-[![Latest Version](https://img.shields.io/github/release/vinkla/algolia.svg?style=flat)](https://github.com/vinkla/algolia/releases)
-[![License](https://img.shields.io/packagist/l/vinkla/algolia.svg?style=flat)](https://packagist.org/packages/vinkla/algolia)
+[![Build Status](https://badgen.net/travis/vinkla/laravel-algolia/master)](https://travis-ci.org/vinkla/laravel-algolia)
+[![Coverage Status](https://badgen.net/codecov/c/github/vinkla/laravel-algolia)](https://codecov.io/github/vinkla/laravel-algolia)
+[![Total Downloads](https://badgen.net/packagist/dt/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
+[![Latest Version](https://badgen.net/github/release/vinkla/algolia)](https://github.com/vinkla/algolia/releases)
+[![License](https://badgen.net/packagist/license/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
 
 ## Installation
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
