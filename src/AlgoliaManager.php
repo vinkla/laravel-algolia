@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
@@ -51,9 +51,9 @@ class AlgoliaManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return \AlgoliaSearch\Client
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
-    protected function createConnection(array $config): Client
+    protected function createConnection(array $config): SearchClient
     {
         return $this->factory->make($config);
     }
