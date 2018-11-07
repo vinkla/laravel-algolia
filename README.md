@@ -9,7 +9,7 @@
 $algolia->search('marty mcfly');
 
 // List indexes.
-$algolia->listIndexes();
+$algolia->listIndices();
 
 // Want to use the facade?
 Algolia::isAlive();
