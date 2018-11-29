@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Tests\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 use Vinkla\Algolia\AlgoliaFactory;
 use Vinkla\Algolia\AlgoliaManager;
@@ -39,7 +39,7 @@ class ServiceProviderTest extends AbstractTestCase
 
     public function testBindings()
     {
-        $this->assertIsInjectable(Client::class);
+        $this->assertIsInjectable(SearchClient::class);
 
         $original = $this->app['algolia.connection'];
         $this->app['algolia']->reconnect();

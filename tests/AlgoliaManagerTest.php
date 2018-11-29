@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Tests\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Illuminate\Contracts\Config\Repository;
 use Mockery;
@@ -40,7 +40,7 @@ class AlgoliaManagerTest extends AbstractTestBenchTestCase
 
         $return = $manager->connection();
 
-        $this->assertInstanceOf(Client::class, $return);
+        $this->assertInstanceOf(SearchClient::class, $return);
 
         $this->assertArrayHasKey('algolia', $manager->getConnections());
     }
@@ -58,7 +58,7 @@ class AlgoliaManagerTest extends AbstractTestBenchTestCase
         $config['name'] = 'algolia';
 
         $manager->getFactory()->shouldReceive('make')->once()
-            ->with($config)->andReturn(Mockery::mock(Client::class));
+            ->with($config)->andReturn(Mockery::mock(SearchClient::class));
 
         return $manager;
     }

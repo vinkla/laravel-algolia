@@ -8,11 +8,11 @@
 // Search.
 $algolia->search('marty mcfly');
 
-// Create global API keys.
-$algolia->addUserKey(['search'], 300);
+// List indexes.
+$algolia->listIndices();
 
 // Want to use the facade?
-Algolia::getLogs();
+Algolia::isAlive();
 ```
 
 [![Build Status](https://badgen.net/travis/vinkla/laravel-algolia/master)](https://travis-ci.org/vinkla/laravel-algolia)

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
@@ -110,7 +110,7 @@ class AlgoliaServiceProvider extends ServiceProvider
             return $manager->connection();
         });
 
-        $this->app->alias('algolia.connection', Client::class);
+        $this->app->alias('algolia.connection', SearchClient::class);
     }
 
     /**

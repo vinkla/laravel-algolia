@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Tests\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use Vinkla\Algolia\AlgoliaFactory;
 
 /**
@@ -32,7 +32,7 @@ class AlgoliaFactoryTest extends AbstractTestCase
             'key' => 'your-api-key',
         ]);
 
-        $this->assertInstanceOf(Client::class, $return);
+        $this->assertInstanceOf(SearchClient::class, $return);
     }
 
     /**

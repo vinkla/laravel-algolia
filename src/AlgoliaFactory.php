@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Vinkla\Algolia;
 
-use AlgoliaSearch\Client;
+use Algolia\AlgoliaSearch\SearchClient;
 use InvalidArgumentException;
 
 /**
@@ -28,9 +28,9 @@ class AlgoliaFactory
      *
      * @param array $config
      *
-     * @return \AlgoliaSearch\Client
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
-    public function make(array $config): Client
+    public function make(array $config): SearchClient
     {
         $config = $this->getConfig($config);
 
@@ -64,11 +64,11 @@ class AlgoliaFactory
      *
      * @param array $auth
      *
-     * @return \AlgoliaSearch\Client
+     * @return \Algolia\AlgoliaSearch\SearchClient
      */
-    protected function getClient(array $auth): Client
+    protected function getClient(array $auth): SearchClient
     {
-        return new Client(
+        return SearchClient::create(
             $auth['id'],
             $auth['key']
         );
