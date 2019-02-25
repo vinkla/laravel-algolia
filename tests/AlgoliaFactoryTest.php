@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Vinkla\Tests\Algolia;
 
 use Algolia\AlgoliaSearch\SearchClient;
+use InvalidArgumentException;
 use Vinkla\Algolia\AlgoliaFactory;
 
 /**
@@ -35,21 +36,19 @@ class AlgoliaFactoryTest extends AbstractTestCase
         $this->assertInstanceOf(SearchClient::class, $return);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testMakeWithoutId()
     {
+        $this->expectException(InvalidArgumentException::class);
+
         $factory = $this->getAlgoliaFactory();
 
         $factory->make(['key' => 'your-api-key']);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testMakeWithoutKey()
     {
+        $this->expectException(InvalidArgumentException::class);
+
         $factory = $this->getAlgoliaFactory();
 
         $factory->make(['id' => 'your-application-id']);
