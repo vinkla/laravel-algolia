@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.1.0 (released 2019-02-27)
+
+- Added laravel 5.8 support
+- Removed laravel 5.7 support
+
 ## 4.0.0 (released 2018-11-29)
 
 - Added algoliasearch-client-php 2.0 support
