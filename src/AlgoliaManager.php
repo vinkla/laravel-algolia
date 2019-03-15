@@ -3,7 +3,7 @@
 /*
  * This file is part of Laravel Algolia.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Vincent Klaiber <hello@doubledip.se>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -20,7 +20,7 @@ use Illuminate\Contracts\Config\Repository;
 /**
  * This is the Algolia manager class.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author Vincent Klaiber <hello@doubledip.se>
  */
 class AlgoliaManager extends AbstractManager
 {
