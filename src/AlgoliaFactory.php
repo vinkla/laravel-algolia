@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Vinkla\Algolia;
 
 use Algolia\AlgoliaSearch\SearchClient;
+use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
 /**
@@ -56,7 +57,7 @@ class AlgoliaFactory
             }
         }
 
-        return array_only($config, $keys);
+        return Arr::only($config, $keys);
     }
 
     /**
