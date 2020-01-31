@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Algolia.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-algolia
  */
 
 declare(strict_types=1);
@@ -19,28 +19,13 @@ use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
 
-/**
- * This is the Algolia service provider class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class AlgoliaServiceProvider extends ServiceProvider
 {
-    /**
-     * Boot the service provider.
-     *
-     * @return void
-     */
     public function boot(): void
     {
         $this->setupConfig();
     }
 
-    /**
-     * Setup the config.
-     *
-     * @return void
-     */
     protected function setupConfig(): void
     {
         $source = realpath($raw = __DIR__ . '/../config/algolia.php') ?: $raw;
@@ -54,11 +39,6 @@ class AlgoliaServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($source, 'algolia');
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register(): void
     {
         $this->registerFactory();
@@ -66,11 +46,6 @@ class AlgoliaServiceProvider extends ServiceProvider
         $this->registerBindings();
     }
 
-    /**
-     * Register the factory class.
-     *
-     * @return void
-     */
     protected function registerFactory(): void
     {
         $this->app->singleton('algolia.factory', function () {
@@ -80,11 +55,6 @@ class AlgoliaServiceProvider extends ServiceProvider
         $this->app->alias('algolia.factory', AlgoliaFactory::class);
     }
 
-    /**
-     * Register the manager class.
-     *
-     * @return void
-     */
     protected function registerManager(): void
     {
         $this->app->singleton('algolia', function (Container $app) {
@@ -97,11 +67,6 @@ class AlgoliaServiceProvider extends ServiceProvider
         $this->app->alias('algolia', AlgoliaManager::class);
     }
 
-    /**
-     * Register the bindings.
-     *
-     * @return void
-     */
     protected function registerBindings(): void
     {
         $this->app->bind('algolia.connection', function (Container $app) {
@@ -114,8 +79,6 @@ class AlgoliaServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get the services provided by the provider.
-     *
      * @return string[]
      */
     public function provides(): array

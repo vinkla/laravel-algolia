@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Algolia.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-algolia
  */
 
 declare(strict_types=1);
@@ -17,20 +17,8 @@ use Algolia\AlgoliaSearch\SearchClient;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
-/**
- * This is the Algolia factory class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class AlgoliaFactory
 {
-    /**
-     * Make a new Algolia client.
-     *
-     * @param array $config
-     *
-     * @return \Algolia\AlgoliaSearch\SearchClient
-     */
     public function make(array $config): SearchClient
     {
         $config = $this->getConfig($config);
@@ -39,13 +27,7 @@ class AlgoliaFactory
     }
 
     /**
-     * Get the configuration data.
-     *
-     * @param string[] $config
-     *
      * @throws \InvalidArgumentException
-     *
-     * @return array
      */
     protected function getConfig(array $config): array
     {
@@ -60,13 +42,6 @@ class AlgoliaFactory
         return Arr::only($config, $keys);
     }
 
-    /**
-     * Get the Algolia client.
-     *
-     * @param array $auth
-     *
-     * @return \Algolia\AlgoliaSearch\SearchClient
-     */
     protected function getClient(array $auth): SearchClient
     {
         return SearchClient::create(

@@ -28,12 +28,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require vinkla/algolia
 ```
 
-If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
-
-```php
-'Algolia' => Vinkla\Algolia\Facades\Algolia::class
-```
-
 ## Configuration
 
 Laravel Algolia requires connection configuration. To get started, you'll need to publish all vendor assets:
@@ -54,41 +48,28 @@ This option `connections` is where each of the connections are setup for your ap
 
 ## Usage
 
-#### AlgoliaManager
-
-This is the class of most interest. It is bound to the ioc container as `algolia` and can be accessed using the `Facades\Algolia` facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of the [Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and checkout the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `AlgoliaSearch\Client`.
-
-#### Facades\Algolia
-
-This facade will dynamically pass static method calls to the `algolia` object in the ioc container which by default is the `AlgoliaManager` class.
-
-#### AlgoliaServiceProvider
-
-This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
-
-### Examples
-Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
+Here you can see an example of you may use this package. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
 ```php
 // You can alias this in config/app.php.
 use Vinkla\Algolia\Facades\Algolia;
 
-Algolia::initIndex('contacts');
 // We're done here - how easy was that, it just works!
+Algolia::initIndex('contacts');
 
-Algolia::getLogs();
 // This example is simple and there are far more methods available.
+Algolia::getLogs();
 ```
 
-The Algolia manager will behave like it is a `AlgoliaSearch\Client`. If you want to call specific connections, you can do that with the connection method:
+The manager will behave like it is a `Algolia\AlgoliaSearch\SearchClient` class. If you want to call specific connections, you can do that with the connection method:
 
 ```php
 use Vinkla\Algolia\Facades\Algolia;
 
-// Writing this…
+// Writing this...
 Algolia::connection('main')->initIndex('contacts');
 
-// …is identical to writing this
+// ...is identical to writing this
 Algolia::initIndex('contacts');
 
 // and is also identical to writing this.
@@ -101,7 +82,7 @@ Algolia::getDefaultConnection(); // This will return main.
 Algolia::setDefaultConnection('alternative'); // The default is now alternative.
 ```
 
-If you prefer to use dependency injection over facades like me, then you can inject the manager:
+If you prefer to use dependency injection over facades, then you can inject the manager:
 
 ```php
 use Vinkla\Algolia\AlgoliaManager;
@@ -124,9 +105,7 @@ class Foo
 App::make('Foo')->bar();
 ```
 
-## Documentation
-
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the official Algolia Search API package](https://github.com/algolia/algoliasearch-client-php#readme).
+For more information on how to use the `Algolia\AlgoliaSearch\SearchClient` class, check out the docs at [`algolia/algoliasearch-client-php`](https://github.com/algolia/algoliasearch-client-php).
 
 ## License
 

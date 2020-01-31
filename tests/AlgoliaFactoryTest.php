@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Algolia.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-algolia
  */
 
 declare(strict_types=1);
@@ -17,11 +17,6 @@ use Algolia\AlgoliaSearch\SearchClient;
 use InvalidArgumentException;
 use Vinkla\Algolia\AlgoliaFactory;
 
-/**
- * This is the Algolia factory test class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class AlgoliaFactoryTest extends AbstractTestCase
 {
     public function testMakeStandard()
