@@ -2,10 +2,8 @@
     "name": "vinkla/algolia",
     "description": "An Algolia bridge for Laravel",
     "keywords": [
-        "laravel",
         "algolia",
-        "search",
-        "api"
+        "laravel"
     ],
     "license": "MIT",
     "authors": [
