@@ -17,7 +17,7 @@ Algolia::isAlive();
 
 [![Build Status](https://badgen.net/travis/vinkla/laravel-algolia/master)](https://travis-ci.org/vinkla/laravel-algolia)
 [![Coverage Status](https://badgen.net/codecov/c/github/vinkla/laravel-algolia)](https://codecov.io/github/vinkla/laravel-algolia)
-[![Total Downloads](https://badgen.net/packagist/dt/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
+[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
 [![Latest Version](https://badgen.net/github/release/vinkla/algolia)](https://github.com/vinkla/algolia/releases)
 [![License](https://badgen.net/packagist/license/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
 
