@@ -15,11 +15,9 @@ $algolia->listIndices();
 Algolia::isAlive();
 ```
 
-[![Build Status](https://badgen.net/travis/vinkla/laravel-algolia/master)](https://travis-ci.org/vinkla/laravel-algolia)
-[![Coverage Status](https://badgen.net/codecov/c/github/vinkla/laravel-algolia)](https://codecov.io/github/vinkla/laravel-algolia)
-[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
-[![Latest Version](https://badgen.net/github/release/vinkla/algolia)](https://github.com/vinkla/algolia/releases)
-[![License](https://badgen.net/packagist/license/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia)
+[![Build Status](https://badgen.net/github/status/vinkla/laravel-algolia/master)](https://github.com/vinkla/laravel-algolia/actions)
+[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/algolia)](https://packagist.org/packages/vinkla/laravel-algolia/stats)
+[![Latest Version](https://badgen.net/github/release/vinkla/laravel-algolia)](https://github.com/vinkla/laravel-algolia/releases)
 
 ## Installation
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
