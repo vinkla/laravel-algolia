@@ -16,7 +16,7 @@ Algolia::isAlive();
 ```
 
 [![Build Status](https://badgen.net/github/checks/vinkla/laravel-algolia?label=build&icon=github)](https://github.com/vinkla/laravel-algolia/actions)
-[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/algolia)](https://packagist.org/packages/vinkla/laravel-algolia/stats)
+[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/algolia)](https://packagist.org/packages/vinkla/algolia/stats)
 [![Latest Version](https://badgen.net/github/release/vinkla/laravel-algolia)](https://github.com/vinkla/laravel-algolia/releases)
 
 ## Installation
